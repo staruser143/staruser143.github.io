@@ -1,6 +1,6 @@
+title: My GitHub Pages Site
+description: A site generated from Markdown files
 theme: jekyll-theme-minimal
-title: Sridhar's HomePage
-description: Bookmark this to keep an eye on my project updates!
 plugins:
   - jekyll-paginate
   - jekyll-sitemap
