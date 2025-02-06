@@ -1,0 +1,15 @@
+module Jekyll
+  class GenerateLinks < Generator
+    priority :high
+
+    def generate(site)
+      all_pages = site.pages.select { |page| page.ext == ".md" || page.ext == ".markdown" }
+
+      links = all_pages.map do |page|
+        "<li><a href=\"#{page.url}\">#{page.data['title'] || File.basename(page.name, '.*')}</a></li>"
+      end
+
+      site.config['generated_links'] = "<ul>#{links.join}</ul>"
+    end
+  end
+end
